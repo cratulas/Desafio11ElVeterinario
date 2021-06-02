@@ -5,6 +5,7 @@ class PetsController < ApplicationController
   # GET /pets.json
   def index
     @pets = Pet.all
+    # @pets = Pet.eager_load(:pet_histories)
   end
 
   # GET /pets/1
