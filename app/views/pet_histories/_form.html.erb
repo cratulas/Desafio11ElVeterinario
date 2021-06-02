@@ -26,6 +26,11 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :pet_id %>
+    <%= form.collection_select :pet_id, @pets, :id , :name , prompt: "Select a pet"%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

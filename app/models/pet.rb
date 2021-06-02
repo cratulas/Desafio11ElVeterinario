@@ -1,7 +1,11 @@
 class Pet < ApplicationRecord
-  has_many :pet_histories
+  has_many :pet_histories, dependent: :destroy
 
+  def to_s
+    name
+  end
   def history_count
+    pet_histories.count
     #TODO-implement
   end
 
