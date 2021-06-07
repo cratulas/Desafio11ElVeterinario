@@ -11,6 +11,7 @@ class PetsController < ApplicationController
   # GET /pets/1
   # GET /pets/1.json
   def show
+    # @animal = Pet.find(params[:id]).pet_histories
   end
 
   # GET /pets/new

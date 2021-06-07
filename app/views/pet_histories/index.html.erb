@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pet Histories</h1>
+<h1 class= "my-4 text-center">Pet Histories</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Weight</th>
@@ -20,9 +20,9 @@
         <td><%= pet_history.heigth %></td>
         <td><%= pet_history.description %></td>
         <td><%= pet_history.pet %></td>
-        <td><%= link_to 'Show', pet_history %></td>
-        <td><%= link_to 'Edit', edit_pet_history_path(pet_history) %></td>
-        <td><%= link_to 'Destroy', pet_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pet_history , class: "btn btn-primary " %></td>
+        <td><%= link_to 'Edit', edit_pet_history_path(pet_history), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', pet_history, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Pet History', new_pet_history_path %>
+<%= link_to 'New Pet History', new_pet_history_path , class: "btn btn-primary " %>

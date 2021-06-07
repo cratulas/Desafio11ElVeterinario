@@ -10,25 +10,36 @@ class Pet < ApplicationRecord
   end
 
   def avg_weight
+    avg = 0
     sum = 0
+    count = pet_histories.count
     @c = pet_histories
-    @c.each do |peso|
-      sum =+ peso.weight
+
+    if count == 0
+      return avg
+    elsif 
+      @c.each do |peso|
+        sum =+ peso.weight
+      end
+      avg = sum/count
     end
-
-    sum/(pet_histories.count)
-
     #TODO-implement
   end
 
   def avg_height
+    avg = 0
     sum = 0
+    count = pet_histories.count
     @c = pet_histories
-    @c.each do |altura|
-      sum =+ altura.heigth
-    end
 
-    sum/(pet_histories.count)
+    if count == 0
+      return avg
+    elsif 
+      @c.each do |peso|
+        sum =+ peso.heigth
+      end
+      avg = sum/count
+    end
 
     #TODO-implement
   end
