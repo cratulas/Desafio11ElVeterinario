@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Max weight</th>
+      <th>Max_height</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client.pets.each do |animal| %>
+      <tr>
+        <td><%= animal.name %></td>
+        <td><%= animal.max_weight %></td>
+        <td><%= animal.max_height %></td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <%= link_to 'Edit', edit_client_path(@client) %> |
+  <%= link_to 'Back', clients_path %>
+  

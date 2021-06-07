@@ -1,5 +1,8 @@
 class Pet < ApplicationRecord
   has_many :pet_histories, dependent: :destroy
+  belongs_to :client
+
+  validates :name, :race, presence: true
 
   def to_s
     name
